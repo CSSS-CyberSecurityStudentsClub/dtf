@@ -61,3 +61,55 @@ chmod 600 /home/participant/levels/level2/real_flags/flag.txt
 # Copy validator script
 cp /setup_scripts/validator_level2.sh /home/participant/levels/level2/validator.sh
 chmod +x /home/participant/levels/level2/validator.sh
+
+# ####################################################
+#               LEVEL 3
+# ####################################################
+mkdir -p /home/participant/levels/level3
+
+# Create readme hint
+echo "Welcome to Neuroverse - Level 3.
+
+Knowledge that once was plain is now hidden in layers.
+Decode the message to unlock your path forward.
+
+Quote: \"What is encoded, can be decoded.\"" > /home/participant/levels/level3/readme.txt
+
+# Create encrypted text (with distractions)
+cat << EOF > /home/participant/levels/level3/encrypted_message.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+U29tZSBzdHJpbmcgdGhhdCBpcyBub3QgdXNlZnVsLg==
+Ut enim ad minim veniam, quis nostrud exercitation.
+TkVVUk9WRVJTRXt1bmxvY2tfdGhlX2VuY29kZWRfbXlzdGVyeX0=
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.
+EOF
+
+# Set permissions
+chmod 000 /home/participant/levels/level3
+chmod 600 /home/participant/levels/level3/*
+
+# Copy validator script
+cp /setup_scripts/validator_level3.sh /home/participant/levels/level3/validator.sh
+chmod +x /home/participant/levels/level3/validator.sh
+
+# ####################################################
+#               LEVEL 4
+# ####################################################
+
+# Create Level 4 directory
+mkdir -p /home/participant/levels/level4
+
+# Create readme hint
+echo "A cloak upon a cloak, beneath another cloak.
+Find your way through." > /home/participant/levels/level4/readme.txt
+
+# Create encrypted file
+echo "4b5256564d5653564e4d34564f5553574a4a4b46455744554f4e4d56513344d4d4e5845345a5445474a574441594b484e523256514d54594e4253564f56545a4d4d5a544153594b0a" > /home/participant/levels/level4/encrypted.txt
+
+# Set permissions
+chmod 000 /home/participant/levels/level4
+chmod 600 /home/participant/levels/level4/*
+
+# Copy validator script
+cp /setup_scripts/validator_level4.sh /home/participant/levels/level4/validator.sh
+chmod +x /home/participant/levels/level4/validator.sh

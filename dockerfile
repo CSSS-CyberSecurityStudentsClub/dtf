@@ -1,6 +1,9 @@
 FROM ubuntu:latest
 
-RUN apt update && apt install -y bash
+RUN apt update && apt install -y bash cowsay 
+
+ENV PATH="/usr/games:${PATH}"
+
 
 RUN useradd -ms /bin/bash participant
 

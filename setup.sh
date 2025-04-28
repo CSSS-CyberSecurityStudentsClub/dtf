@@ -113,3 +113,36 @@ chmod 600 /home/participant/levels/level4/*
 # Copy validator script
 cp /setup_scripts/validator_level4.sh /home/participant/levels/level4/validator.sh
 chmod +x /home/participant/levels/level4/validator.sh
+
+# ####################################################
+#               LEVEL 5
+# ####################################################
+
+# Create Level 5 directory and secret subdirectory
+mkdir -p /home/participant/levels/level5/moo_may_know
+
+# Create hint file
+echo "Welcome to Neuroverse - Level 5.
+
+Sometimes the wisest words are spoken by the humblest creatures.
+Maybe... a cow knows something?
+
+Quote: \"Listen to those who are often ignored.\"" > /home/participant/levels/level5/readme.txt
+
+# Encode the flag in base64 twice for slight extra trickiness
+echo "NEUROVERSE{moo_secret_flag}" | base64 | base64 > /home/participant/levels/level5/.cow_secret.b64
+
+# Set permissions
+chmod 000 /home/participant/levels/level5
+
+# Patch cowsay in bashrc
+echo '
+# Neuroverse Custom Cowsay Patch
+cowsay() {
+  if [[ "$(pwd)" == "/home/participant/levels/level5/moo_may_know" ]]; then
+    cat /home/participant/levels/level5/.cow_secret.b64 | /usr/games/cowsay
+  else
+    /usr/games/cowsay "$@"
+  fi
+}
+' >> /home/participant/.bashrc

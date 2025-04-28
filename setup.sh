@@ -104,7 +104,7 @@ echo "A cloak upon a cloak, beneath another cloak.
 Find your way through." > /home/participant/levels/level4/readme.txt
 
 # Create encrypted file
-echo "4b5256564d5653564e4d34564f5553574a4a4b46455744554f4e4d56513344d4d4e5845345a5445474a574441594b484e523256514d54594e4253564f56545a4d4d5a544153594b0a" > /home/participant/levels/level4/encrypted.txt
+echo "536c7044566b74565531424c576b4e5752565579526c424f563064444e6b784754307061566a59314d307050556c5648557a4e544e30355355566854576b785454303432555655395054304b0a" > /home/participant/levels/level4/encrypted.txt
 
 # Set permissions
 chmod 000 /home/participant/levels/level4
